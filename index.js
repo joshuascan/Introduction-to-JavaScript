@@ -84,8 +84,7 @@ Do the following:
 */
 
 function dogYears(age){
-    let sum = age * 7;
-    return sum;
+    return age * 7;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -162,13 +161,14 @@ let computer = Math.ceil(3 * Math.random());
         computer = 'paper';
     } else computer = 'scissors';
 
-console.log(computer);
 
-// function game(user, computer){
-    
-// }
-
-
+function game(user, computer){
+    if (user === 'rock' && computer === 'scissors' || user === 'paper' && computer === 'rock' || user === 'scissors' && computer === 'paper'){
+        return "you win!";
+    } else if (user === computer){
+        return "it's a tie";
+    } else return "you lose!";
+}
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -234,9 +234,17 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
+function grade(score){
+  if (score >= 90){
+    return 'you got an A';
+  } else if (score >= 80){
+    return 'you got a B';
+  } else if (score >= 70){
+    return 'you got a C';
+  } else if (score >= 60){
+    return 'you got a D';
+  } else return 'you got an F';
+}
   
   
 
