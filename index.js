@@ -155,10 +155,20 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
-  
+let computer = Math.ceil(3 * Math.random());
+    if (computer === 1 ){
+        computer = 'rock';
+    } else if (computer === 2){
+        computer = 'paper';
+    } else computer = 'scissors';
+
+console.log(computer);
+
+// function game(user, computer){
+    
+// }
+
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -203,11 +213,10 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-        for (i = number; i > 0; i--)
+        for (let i = number; i > 0; i--)
         return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
   }
 
-  console.log(annoyingSong(14));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
