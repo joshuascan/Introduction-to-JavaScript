@@ -36,7 +36,7 @@ Do the following:
 
 let firstVar = 1;
 let secondVar = 2;
-if (secondVar = 2) {
+if (secondVar === 2) {
     firstVar = 42;
     console.log(firstVar);
 }
@@ -69,11 +69,8 @@ Do the following:
 
 function multiply(a,b){
     let sum = a * b;
-    console.log(sum);
     return sum;
   }
-
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -86,11 +83,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    let sum = age * 7;
+    return sum;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -119,10 +115,23 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(pounds,years){
+    if (years >= 1 && pounds <= 5){
+    return (pounds * .05);
+  } else if (years >= 1 && pounds <= 10){
+    return (pounds * .04);
+  } else if (years >= 1 && pounds <= 15){
+    return (pounds * .03);
+  } else if (years >= 1 && pounds > 15){
+    return (pounds * .02);
+  } else if (years >= 2/12 && years < 4/12){
+    return (pounds * .1);
+  } else if (years >= 4/12 && years < 7/12){
+    return (pounds * .05);
+  } else if (years >= 7/12 && years < 12/12){
+    return (pounds * .04);
   }
-
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -163,8 +172,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return kilometers * 0.621371;
   }
 
 
@@ -177,8 +186,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+    return centimeters / 30.48;
   }
  
 
@@ -193,9 +202,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+        for (i = number; i > 0; i--)
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
   }
+
+  console.log(annoyingSong(14));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
